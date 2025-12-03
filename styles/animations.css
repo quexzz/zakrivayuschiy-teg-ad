@@ -9,3 +9,91 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/* Keyframes */
+@keyframes heart {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.5;
+  }
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Heart icon */
+.like-icon {
+  cursor: pointer;
+}
+
+.like-icon:hover .core {
+  opacity: 1;
+}
+
+.like-icon:hover .main-body {
+  opacity: 1;
+}
+
+.like-icon:active .core {
+  opacity: 1;
+  fill: var(--color-heart-fill);
+}
+
+.like-icon:active .main-body {
+  opacity: 1;
+  fill: var(--color-heart-fill);
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: 0.3s ease-in 0.1s 2 alternate heart;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-heart-fill);
+}
+
+.like-icon.is-liked .core {
+  opacity: 1;
+  fill: var(--color-heart-fill);
+}
+
+.like-icon.is-liked .main-body {
+  opacity: 1;
+  fill: var(--color-heart-fill);
+}
+
+.like-icon.is-liked .sparks {
+  animation: 0.3s ease-in 0.3s 2 alternate sparks;
+}
+
+/* Heart parts */
+.contour {
+  fill: var(--color-heart-outline);
+  transition: fill 0.3s 0.06s;
+}
+
+.core {
+  fill: var(--color-text);
+  opacity: 0;
+  transition: opacity 0.3s, fill 0.3s;
+}
+
+.main-body {
+  fill: var(--color-text);
+  opacity: 0;
+  transition: opacity 0.3s 0.05s, fill 0.3s 0.05s;
+}
+
+.sparks {
+  fill: var(--color-heart-fill);
+  opacity: 0;
+}
