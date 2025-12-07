@@ -1,1 +1,1 @@
-https://github.com/quexzz/zakrivayuschiy-teg-ad123
+https://github.com/quexzz/zakrivayuschiy-teg-ad
